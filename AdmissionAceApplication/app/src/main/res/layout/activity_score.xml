@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ScoreActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="#800000">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnQuit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/btn_score"
+                android:padding="0dp"
+                android:text="Quit"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnRetry" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/wrong" />
+
+            <TextView
+                android:id="@+id/wrongAnsw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="39dp"
+                android:text="20"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+            <TextView
+                android:id="@+id/rightAnsw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="20"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:srcCompat="@drawable/check" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/stat" />
+
+            <TextView
+                android:id="@+id/totalQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:text="25"
+                android:textColor="#ffd230"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                app:srcCompat="@drawable/question" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRetry"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/btn_score"
+                android:padding="0dp"
+                android:text="Retry"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statistics and Results"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:srcCompat="@drawable/ic_back"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
