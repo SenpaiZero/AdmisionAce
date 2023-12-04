@@ -34,6 +34,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
@@ -67,6 +68,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
@@ -99,6 +101,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
@@ -130,6 +133,7 @@
                 android:id="@+id/logic"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
                 android:layout_margin="8dp"
                 app:cardElevation="10dp">
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Scale animation from 0% to 100% starting from the center -->
+    <scale
+        android:duration="3000"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%" />
+
+    <!-- Alpha animation from 0.1 to 1.0 -->
+    <alpha
+        android:duration="3000"
+        android:fromAlpha="0.1"
+        android:toAlpha="1.0" />
+
+    <!-- Adjust other desired animations here if needed -->
+</set>
