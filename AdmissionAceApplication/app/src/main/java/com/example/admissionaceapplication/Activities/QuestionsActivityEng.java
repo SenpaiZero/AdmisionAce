@@ -1,6 +1,7 @@
 package com.example.admissionaceapplication.Activities;
 
 import android.animation.Animator;
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ public class QuestionsActivityEng extends AppCompatActivity {
 
         binding.cardView22.setEnabled(false);
         binding.cardView22.setAlpha(0);
+
         if (setName.equals("SET-1")){
 
             setOne();
@@ -104,8 +106,16 @@ public class QuestionsActivityEng extends AppCompatActivity {
                 
             }
         });
+        binding.btnQuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuestionsActivityEng.this, NumItemsActivityEng.class);
+                startActivity(intent);
+            }
+        });
+        binding.btnQuit.setEnabled(true);
+    }
 
-        }
 
     private void resetTimer() {
 
@@ -232,7 +242,7 @@ public class QuestionsActivityEng extends AppCompatActivity {
         binding.btnNext.setEnabled(true);
         binding.btnNext.setAlpha(1);
 
-        if (selectedOption.getText().toString().equals(list.get(position).getCorrectAnswer())) {
+        if (selectedOption.getText().toString().contains(list.get(position).getCorrectAnswer())) {
 
             score++;
             selectedOption.setBackgroundResource(R.drawable.right_answer);
@@ -256,7 +266,13 @@ public class QuestionsActivityEng extends AppCompatActivity {
         }
 
     }
-
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, NumItemsActivityEng.class));
+        finish();
+    }
     private void setThree(){
 
         list.add(new QuestionModel("Poetry: Rhyme :: Philosophy: _____",

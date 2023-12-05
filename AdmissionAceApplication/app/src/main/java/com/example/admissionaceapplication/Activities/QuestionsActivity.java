@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.admissionaceapplication.MainActivity;
 import com.example.admissionaceapplication.Models.QuestionModel;
 import com.example.admissionaceapplication.R;
 import com.example.admissionaceapplication.databinding.ActivityQuestionsBinding;
@@ -106,7 +108,15 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         });
 
-        }
+        binding.btnQuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuestionsActivity.this, NumItemsActivity.class);
+                startActivity(intent);
+            }
+        });
+        binding.btnQuit.setEnabled(true);
+    }
 
     private void resetTimer() {
 
@@ -223,7 +233,13 @@ public class QuestionsActivity extends AppCompatActivity {
         }
 
     }
-
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, NumItemsActivity.class));
+        finish();
+    }
     private void checkAnswer(Button selectedOption) {
 
         if (timer !=null){
@@ -232,8 +248,7 @@ public class QuestionsActivity extends AppCompatActivity {
         }
         binding.btnNext.setEnabled(true);
         binding.btnNext.setAlpha(1);
-
-        if (selectedOption.getText().toString().equals(list.get(position).getCorrectAnswer())) {
+        if (selectedOption.getText().toString().contains(list.get(position).getCorrectAnswer())) {
 
             score++;
             selectedOption.setBackgroundResource(R.drawable.right_answer);

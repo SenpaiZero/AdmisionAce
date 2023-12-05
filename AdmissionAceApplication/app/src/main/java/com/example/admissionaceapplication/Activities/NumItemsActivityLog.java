@@ -3,6 +3,7 @@ package com.example.admissionaceapplication.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -50,5 +51,12 @@ public class NumItemsActivityLog extends AppCompatActivity {
             }
         });
 
+    }
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }

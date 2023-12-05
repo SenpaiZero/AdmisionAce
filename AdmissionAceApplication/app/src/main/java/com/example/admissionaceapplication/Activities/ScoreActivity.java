@@ -2,12 +2,14 @@ package com.example.admissionaceapplication.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.admissionaceapplication.MainActivity;
 import com.example.admissionaceapplication.R;
 import com.example.admissionaceapplication.databinding.ActivityQuestionsBinding;
 import com.example.admissionaceapplication.databinding.ActivityScoreBinding;
@@ -65,4 +67,11 @@ public class ScoreActivity extends AppCompatActivity {
         });
 
 }
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 }

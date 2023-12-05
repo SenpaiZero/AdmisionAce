@@ -1,6 +1,7 @@
 package com.example.admissionaceapplication.Activities;
 
 import android.animation.Animator;
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -105,8 +106,16 @@ public class QuestionsActivitySc extends AppCompatActivity {
 
             }
         });
+        binding.btnQuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuestionsActivitySc.this, NumItemsActivitySc.class);
+                startActivity(intent);
+            }
+        });
+        binding.btnQuit.setEnabled(true);
+    }
 
-        }
 
     private void resetTimer() {
 
@@ -232,7 +241,7 @@ public class QuestionsActivitySc extends AppCompatActivity {
         binding.btnNext.setEnabled(true);
         binding.btnNext.setAlpha(1);
 
-        if (selectedOption.getText().toString().equals(list.get(position).getCorrectAnswer())) {
+        if (selectedOption.getText().toString().contains(list.get(position).getCorrectAnswer())) {
 
             score++;
             selectedOption.setBackgroundResource(R.drawable.right_answer);
@@ -256,7 +265,13 @@ public class QuestionsActivitySc extends AppCompatActivity {
         }
 
     }
-
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, NumItemsActivitySc.class));
+        finish();
+    }
     private void setThree() {
 
         list.add(new QuestionModel("What kind of element would you find on the far left-hand side of the periodic table?",
@@ -586,7 +601,7 @@ public class QuestionsActivitySc extends AppCompatActivity {
 
     private void setOne() {
         list.add(new QuestionModel("This organ secretes a hormone that causes the liver to break down glycogen.",
-                "Thyroid", "Pancreas- ans", "Parathyroid", "Adrenal medulla",
+                "Thyroid", "Pancreas", "Parathyroid", "Adrenal medulla",
                 "Pancreas",
                 "The pancreas secretes glucagon in response to low blood glucose levels. This causes the liver to release glucose into the bloodstream."));
 
@@ -599,11 +614,11 @@ public class QuestionsActivitySc extends AppCompatActivity {
                 "The apparent weight is zero. The person is in free fall. No forces are acting on the person except gravity."));
 
         list.add(new QuestionModel("While a person lifts a book of mass 2kg from the floor to a tabletop, 1.5 m above the floor, how much work does the gravitational force do on the book?",
-                "-30J- ans",
-                "-15J",
+                "30J",
+                "15J",
                 "0J",
                 "15J",
-                "-30J",
+                "30J",
                 "The gravitational force points downward while the book’s displacement is upward. Therefore, the work done by gravity is mgh = - (2 kg)(10 N/kg)(1.5 m)= -30J."));
         list.add(new QuestionModel("Which type of biome is found at the lowest latitudes?",
                 "Rain forest",

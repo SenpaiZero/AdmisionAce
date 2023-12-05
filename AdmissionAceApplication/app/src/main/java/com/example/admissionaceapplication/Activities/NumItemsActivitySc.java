@@ -1,5 +1,6 @@
 package com.example.admissionaceapplication.Activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -50,5 +51,12 @@ public class NumItemsActivitySc extends AppCompatActivity {
             }
         });
 
+    }
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
