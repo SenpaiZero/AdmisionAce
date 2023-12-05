@@ -14,19 +14,22 @@
         android:theme="@style/Theme.AdmissionAceApplication"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.NumItemsActivityLog"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.NumItemsActivityEng"
-            android:exported="false" />
-        <activity
             android:name=".Activities.ScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.NumItemsActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.QuestionsActivity"
             android:exported="false" />
         <activity
+            android:name=".Activities.NumItemsActivityEng"
+            android:exported="false" />
+        <activity
             android:name=".Activities.QuestionsActivityEng"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.NumItemsActivityLog"
             android:exported="false" />
         <activity
             android:name=".Activities.QuestionsActivityLog"
@@ -36,9 +39,6 @@
             android:exported="false"/>
         <activity
             android:name=".Activities.NumItemsActivitySc"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.NumItemsActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.SplashScreenActivity"

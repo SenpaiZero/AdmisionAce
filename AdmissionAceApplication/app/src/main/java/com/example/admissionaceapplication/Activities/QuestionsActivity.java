@@ -54,6 +54,9 @@ public class QuestionsActivity extends AppCompatActivity {
         }else if (setName.equals("SET-2")) {
 
             setTwo();
+        }else if (setName.equals("SET-3")) {
+
+            setThree();
         }
 
         for (int i =0;i<4;i++) {
@@ -255,6 +258,149 @@ public class QuestionsActivity extends AppCompatActivity {
 
     }
 
+    private void setThree() {
+        list.add(new QuestionModel("WHICH OF THE FOLLOWING HAS THE LOWEST VALUE?",
+                "A. 3/8",
+                "B.0.2² = 0.04",
+                "C.2/25",
+                "D.10% = 0.1",
+                "B",
+                "To compare the values of the given options, let's convert them to a common format for easier comparison.\nA. 3/8\nB.0.2² = 0.04\nC.2/25\nD.10% = 10/100 = 0.1\nComparing these values, we can see that 0.04 (option B) is the smallest among them."));
+
+        list.add(new QuestionModel("-4 [8 – (5 – 2) -3] =",
+                "A. 15",
+                "B. 17",
+                "C. -17",
+                "D. -8",
+                "D",
+                "Let's simplify the expression step by step:\n= −4[8−(5−2)−3]\n= −4[8−3−3]\n= −4[2]\n= −4×2\n= -8"));
+
+        list.add(new QuestionModel("What is the product of -1.54 and -1.64?",
+                "A. 252.56",
+                "B. 25.256",
+                "C. 2.5256",
+                "D. -2.5256",
+                "C",
+                "The product of -1.54 and -1.64 is obtained by multiplying these two numbers: (-1.54) * (-1.64) = 2.5256."));
+
+        list.add(new QuestionModel("5.75 =",
+                "A. 11/2",
+                "B. 17/3",
+                "C. 23/4",
+                "D. 29/5",
+                "C",
+                "To express 5.75 as a fraction, you can write it as 575/100 because 5.75 is equivalent to 575/100. Now, let's simplify this fraction: 575/100 = 23x25/4x25 = 23/4"));
+
+        list.add(new QuestionModel("(x³y²)⁴ =",
+                "A. x ⁷y⁶",
+                "B. x¹²y⁸",
+                "C. x⁸y⁶",
+                "D. x³y⁸",
+                "B",
+                "To simplify the expression (x³y²)⁴, you need to raise both the base x³y² and the exponent 4: (x³y²)⁴ = (x³*⁴y²*⁴ = x¹²y⁸"));
+
+        list.add(new QuestionModel(
+                "6. (4²) (5²) =",
+                "A. 9²",
+                "B. 9⁴",
+                "C. 200",
+                "D. 400",
+                "D",
+                "You can calculate each part separately and then multiply the results: (4²) = 4×4=16 (5²) = 5×5=25 Now, multiply these results together: 16×25=400"
+        ));
+
+        list.add(new QuestionModel(
+                "7. Which of the following groups of numbers are multiples of 6 between 81 and 100?",
+                "A. 84, 90",
+                "B. 86, 92",
+                "C. 84, 90, 96",
+                "D. 86, 92, 98",
+                "C",
+                "None of 86, 92, or 98 is a multiple of 6. So, the group of numbers that are multiples of 6 between 81 and 100 is: 84, 90, 96"
+        ));
+
+        list.add(new QuestionModel(
+                "8. Which of the following is true for vertical angles?",
+                "A. They are always congruent",
+                "B. They are always supplementary",
+                "C. They are always complementary",
+                "D. Their sum is 90 degrees",
+                "A",
+                "Vertical angles are always congruent, meaning they have the same measure."
+        ));
+
+        list.add(new QuestionModel(
+                "9. The product of -3 and -6 is how much larger than the sum of -2 and -7?",
+                "A. 9",
+                "B. 12",
+                "C. 15",
+                "D. 27",
+                "D",
+                "Let's calculate the expressions: Product of -3 and -6: (-3) * (-6) = 18 Sum of -2 and -7: (-2) + (-7) = -9 Now, find how much larger the product is than the sum: [18 - (-9) = 18 + 9 = 27 So, the product of -3 and -6 is 27 units larger than the sum of -2 and -7."
+        ));
+
+        list.add(new QuestionModel(
+                "10. Which expression has the largest value?",
+                "A. |7|",
+                "B. |7 - 2|",
+                "C. 2 - |7|",
+                "D. |7| + 2",
+                "D",
+                "Let's evaluate each expression: A. |7| is simply 7. B. |7 - 2| is |5| which is 5. C. ( 2 - |7| is 2 - 7 (since the absolute value of 7 is 7) which is -5. D. ( |7| + 2 is 7 + 2 which is 9. The expression with the largest value is D. |7| + 2, which equals 9."
+        ));
+
+        list.add(new QuestionModel("What is the weight, in kilograms of 26 sacks of sugar if 156 sacks weigh 12 kg?",
+                "A", "2 a", "B", "3",
+                "2",
+                "Let x be the weight of 26 sacks of sugar. The given information is that 156 sacks weigh 12 kg. So, the proportion is: 156/12 = 26/x Now, cross-multiply to solve for x: 156 x x = 12x26 156x = 312 x= 312/156 = 2 Therefore, the weight of 26 sacks of sugar is 2 kg."));
+
+        list.add(new QuestionModel("The point with coordinates (-5, 3) is in which quadrant?",
+                "A", "I", "B", "II ans",
+                "II",
+                "The point (-5, 3) has: An x-coordinate of -5 (negative) and A y-coordinate of 3 (positive) In the Cartesian coordinate system: - Quadrant I is where both x and y are positive. - Quadrant II is where x is negative and y is positive. - Quadrant III is where both x and y are negative. - Quadrant IV is where x is positive and y is negative. Therefore, the point (-5, 3) is in Quadrant II."));
+
+        list.add(new QuestionModel("If m – 4 = 9, then 3m – 5 =",
+                "A", "10", "B", "17",
+                "34",
+                "Let's solve for m using the given equation m - 4 = 9: Add 4 to both sides of the equation: m - 4 + 4 = 9 + 4 Simplify: m = 13 Now that we know m = 13, let's find the value of 3m - 5: 3m - 5 = 3 x 13 - 5 = 39 - 5 = 34"));
+
+        list.add(new QuestionModel("Anne will be P years old in Q years. Her age R years ago was",
+                "A", "P + Q - R", "B", "P – Q + R",
+                "P - Q - R",
+                "Let's break down the information given: 1. Anne will be P years old in Q years. 2. Her age R years ago. If Anne will be P years old in Q years, then her current age is P - Q years. Now, her age R years ago is (P - Q) - R. So, the correct expression for Anne's age R years ago is: P - Q - R"));
+
+        list.add(new QuestionModel("What percent profit was made on a pair of pants that was bought for P250 and sold for P350?",
+                "A", "10%", "B", "20%",
+                "40%",
+                "To calculate the percentage profit, you can use the following formula: Percentage Profit = (Selling Price – Cost Price / Cost Price) x 100 In this case: - Cost Price (CP) is P250 - Selling Price (SP) is P350 Percentage Profit = (350-250/250) x 100 Percentage Profit = (100/250) x 100 Percentage Profit = 0.4 x 100 = 40%"));
+
+        list.add(new QuestionModel("Which of the following is true for vertical angles?",
+                "A", "They are always congruent. ans", "B", "They are always supplementary.",
+                "They are always congruent.",
+                "Vertical angles are always congruent, meaning they have the same measure."));
+
+        list.add(new QuestionModel("If 0.002x = 2, then 2.2x=",
+                "A", "2002", "B", "2020",
+                "2200",
+                "Given that 0.002x = 2, we can solve for x: 0.002x = 2 Divide both sides by 0.002 to isolate x: x = 2/0.002 = 1000 Now, multiply 2.2 by x: 2.2x = 2.2 x times 1000 = 2200"));
+
+        list.add(new QuestionModel("Taylor is 8 years younger than her sister Nikki. Twenty-eight years ago, she was half as old as Nikki. How old is Nikki now?",
+                "A", "44 ans", "B", "42",
+                "44",
+                "Let T be Taylor's current age, and N be Nikki's current age. 1. Taylor is 8 years younger than Nikki: T = N - 8. 2. Twenty-eight years ago, Taylor's age (T - 28) was half Nikki's age 1/2 (N - 28). 3. Substitute T = N - 8 into the equation: N - 8 - 28 = 1/2 (N - 28). 4. Simplify: 2(N - 36) = N - 28. 5. Solve for N: N = 44. Therefore, Nikki's current age is 44."));
+
+        list.add(new QuestionModel("What is the measure of each interior angle in a regular hexagon?",
+                "A", "120 degrees ans", "B", "90 degrees",
+                "120 degrees",
+                "In a regular hexagon, each interior angle measures 120 degrees."));
+
+        list.add(new QuestionModel("If y is an integer and y + 3 > 0, what is the least possible value of y?",
+                "A", "-3", "B", "-2 ans",
+                "-2",
+                "To find the least possible value of y given y + 3 > 0, you can solve for y: y + 3 > 0 Subtract 3 from both sides: y > -3 This means y can be any integer greater than -3. The least possible value of y is then -2, as it is the smallest integer that satisfies the inequality."));
+
+
+    }
     private void setTwo() {
         list.add(new QuestionModel(
                 "Which of the following fractions is larger than 2 1/4 but smaller than 2 2/5?",

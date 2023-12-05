@@ -75,6 +75,10 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder>  {
                 {
                     intent = new Intent(context, QuestionsActivityLog.class);
                 }
+                else
+                {
+                    intent = new Intent(context, QuestionsActivitySc.class);
+                }
                 intent.putExtra("set",model.getSetNmae());
                 context.startActivity(intent);
 
